@@ -1,40 +1,26 @@
 import React from "react";
-import Button from "./Button";
-import { GoBell, GoCloudDownload, GoDatabase } from "react-icons/go";
+import Accordion from "./components/Accordion";
 
 function App() {
-    const handleClick = () => {
-        console.log('Click!!')
-    }
-  return (
-    <div>
-      <div>
-        <Button success rounded outline onClick={handleClick}>
-          <GoBell />
-          Click Me!
-        </Button>
-      </div>
-      <div>
-        <Button danger outline>
-          <GoCloudDownload/>
-          Buy Now!
-        </Button>
-      </div>
-      <div>
-        <Button warning>See Deals!</Button>
-      </div>
-      <div>
-        <Button secondary outline>
-          <GoDatabase/>
-          Add to Cart!
-        </Button>
-      </div>
-      <div>
-        <Button primary rounded>
-          Checkout!
-        </Button>
-      </div>
-    </div>
-  );
+  const items = [
+    {
+      id:'1',
+      label: 'Can I use React?',
+      content: 'Yes you can! I Ccan use React on any project I want to. You can use React on any project. React is awesome. '
+    },
+    {
+      id:'2',
+      label: 'Can I use JS?',
+      content: 'Yes you can use JS! JS is sometimes simpler than React. There are still more projects made in JS than React.'
+    },
+    {
+      id:'3',
+      label: 'Can I use CSS?',
+      content: 'Yes you can use css! CSS rules! You can even create animations using purely HTML and CSS.'
+    },
+  ]
+    return(
+      <Accordion items={items}/>
+    )
 }
 export default App;
