@@ -1,27 +1,28 @@
-
-import React from "react";
-import Accordion from '../pages/AccordionPage';
+import Accordion from '../components/Accordion';
 
 function AccordionPage() {
   const items = [
     {
-      id:'1',
-      label: 'Can I use React?',
-      content: 'Yes you can! I Ccan use React on any project I want to. You can use React on any project. React is awesome. '
+      id: 'l2kj5',
+      label: 'Can I use React on a project?',
+      content:
+        'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.',
     },
     {
-      id:'2',
-      label: 'Can I use JS?',
-      content: 'Yes you can use JS! JS is sometimes simpler than React. There are still more projects made in JS than React.'
+      id: 'lk2j35lkj',
+      label: 'Can I use Javascript on a project?',
+      content:
+        'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.',
     },
     {
-      id:'3',
-      label: 'Can I use CSS?',
-      content: 'Yes you can use css! CSS rules! You can even create animations using purely HTML and CSS.'
+      id: 'l1kj2i0g',
+      label: 'Can I use CSS on a project?',
+      content:
+        'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.',
     },
-  ]
-    return(
-      <Accordion items={items}/>
-    )
+  ];
+
+  return <Accordion items={items} />;
 }
+
 export default AccordionPage;

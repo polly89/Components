@@ -1,25 +1,23 @@
-import { useState } from "react";
-import Dropdown from "./components/Dropdown";
+import Link from './components/Link';
+import Route from './components/Route';
+import AccordionPage from './pages/AccordionPage';
+import DropdownPage from './pages/DropdownPage';
 
 function App() {
-  const [selection, setSelected] = useState(null);
-
-  const handleSelect = (option) => {
-    setSelected(option);
-  };
-  const options = [
-    { label: "Red", value: "red" },
-    { label: "Green", value: "green" },
-    { label: "Blue", value: "blue" },
-  ];
   return (
     <div>
-      <Dropdown 
-      options={options} 
-      value={selection} // changed from 'selection={selection}' to align with community convention on 'form control'
-      onChange={handleSelect} // changed from 'handleSelect={handleSelect}'
-      />
+      <Link to="/accordion">Go to accordion</Link>
+      <Link to="/dropdown">Go to dropdown</Link>
+      <div>
+        <Route path="/accordion">
+          <AccordionPage />
+        </Route>
+        <Route path="/dropdown">
+          <DropdownPage />
+        </Route>
+      </div>
     </div>
   );
 }
+
 export default App;
